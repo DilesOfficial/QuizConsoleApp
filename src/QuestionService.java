@@ -1,65 +1,17 @@
 public class QuestionService {
-    private int id;
-    private String question;
-    private String opt1;
-    private String opt2;
-    private String opt3;
-    private String opt4;
-    private String answer;
+    Question[]  questions = new Question[5];
 
-    public int getId() {
-        return id;
+    public QuestionService() {
+        questions[0] = new Question(1, "size of int", "2", "6", "4", "8", "4");
+        questions[1] = new Question(2, "size of double", "2", "6", "4", "8", "8");
+        questions[2] = new Question(3, "size of char", "2", "6", "4", "8", "2");
+        questions[3] = new Question(4, "size of long", "2", "6", "4", "8", "8");
+        questions[4] = new Question(5, "size of boolean", "1", "2", "4", "8", "1");
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
-    public String getOpt2() {
-        return opt2;
-    }
-
-    public void setOpt2(String opt2) {
-        this.opt2 = opt2;
-    }
-
-    public String getOpt1() {
-        return opt1;
-    }
-
-    public void setOpt1(String opt1) {
-        this.opt1 = opt1;
-    }
-
-    public String getOpt3() {
-        return opt3;
-    }
-
-    public void setOpt3(String opt3) {
-        this.opt3 = opt3;
-    }
-
-    public String getOpt4() {
-        return opt4;
-    }
-
-    public void setOpt4(String opt4) {
-        this.opt4 = opt4;
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void displayQuestion() {
+        for (Question q : questions) {
+            System.out.println(q);
+        }
     }
 }
